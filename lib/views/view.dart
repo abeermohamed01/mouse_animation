@@ -14,7 +14,6 @@ class HomeView extends StatelessWidget {
         desktop: DesktopLayout(),
         tablet: TabletLayout(),
         mobile: MobileLayout(),
-
       ),
     );
   }

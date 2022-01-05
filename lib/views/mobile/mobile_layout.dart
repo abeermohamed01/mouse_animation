@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mouse_animation/widgets/mouse_controller.dart';
 
 class MobileLayout extends StatelessWidget {
 
@@ -10,8 +11,13 @@ class MobileLayout extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: Colors.black,
+            child: AnimatedCursor(),
+          ),
           Row(
-
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 30 , top: 50),
@@ -108,7 +114,7 @@ class MobileLayout extends StatelessWidget {
                           maxLines: 6,
                           overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.ptSans(
-                              fontSize: 20, color: Colors.grey[600])),
+                              fontSize: 20, color: Colors.black)),
                       SizedBox(height: 30,),
                       Text(
                           'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
@@ -116,7 +122,7 @@ class MobileLayout extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
 
                           style: GoogleFonts.ptSans(
-                              fontSize: 20, color: Colors.grey[600])),
+                              fontSize: 20, color: Colors.black)),
                       SizedBox(height: 30,),
                       Text(
                           'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ',
@@ -124,20 +130,20 @@ class MobileLayout extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
 
                           style: GoogleFonts.ptSans(
-                              fontSize: 20, color: Colors.grey[600])),
-                      SizedBox(height: 30,),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width*0.2,
-                              height: 200,
-                              color: Colors.blue[800],
-                            )
-                          ],
-                        ),
-                      )
+                              fontSize: 20, color: Colors.black)),
+                      // SizedBox(height: 30,),
+                      // Expanded(
+                      //   child: Row(
+                      //     mainAxisAlignment: MainAxisAlignment.end,
+                      //     children: [
+                      //       Container(
+                      //         width: MediaQuery.of(context).size.width*0.2,
+                      //         height: 200,
+                      //         color: Colors.blue[800],
+                      //       )
+                      //     ],
+                      //   ),
+                      // )
                     ],
                   ),
                 ),
